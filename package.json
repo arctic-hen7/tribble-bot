@@ -1,0 +1,27 @@
+{
+  "name": "tribble-bot",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A GitHub action for automatically triaging issues created with Tribble.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build src/index.js -o dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arctic-hen7/tribble-bot.git"
+  },
+  "author": "arctic-hen7",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arctic-hen7/tribble-bot/issues"
+  },
+  "homepage": "https://github.com/arctic-hen7/tribble-bot#readme",
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.1"
+  },
+  "dependencies": {
+    "@probot/adapter-github-actions": "^3.0.1"
+  }
+}

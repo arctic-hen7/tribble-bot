@@ -1,0 +1,5 @@
+name: "Tribble"
+description: "An action that automatically triages issues created with Tribble."
+runs:
+  using: "node12"
+  main: "action.js"
