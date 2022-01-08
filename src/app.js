@@ -9,9 +9,9 @@ const newIssueHandler = async (ctx) => {
     try {
         // Get the body of the issue so that we can parse it
         const { data } = await ctx.octokit.issues.get(params);
-        console.log(data.body);
         // Get the labels out of that
         let labels = getRequestedLabels(data.body);
+        console.log(labels);
         // If we didn't find the appropriate formatting, we'll get `undefined`, in which case this issue wasn't created with Tribble and we should shut up
         if (labels === undefined) {
             return;
@@ -33,6 +33,8 @@ const getRequestedLabels = (issueBody) => {
     // We add to this because we need to get the actual contained text
     const detailsOpenIdx = issueBody.lastIndexOf("<details>\n<summary>Tribble internal data</summary>") + 51;
     const detailsCloseIdx = issueBody.lastIndexOf("</details>");
+    console.log(detailsOpenIdx);
+    console.log(detailsCloseIdx);
     // The indexing will return `-1` if it found nothing (but one had 51 added)
     if (detailsOpenIdx === 50 || detailsCloseIdx === -1) {
         return undefined;
