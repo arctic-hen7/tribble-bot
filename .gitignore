@@ -1,4 +1,4 @@
 node_modules/
 # `ncc` creates some unnecessary stuff
-dist/
+dist/*
 !dist/index.js
