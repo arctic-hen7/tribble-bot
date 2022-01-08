@@ -1,4 +1,4 @@
-name: "Tribble"
+name: "Tribble Bot"
 description: "An action that automatically triages issues created with Tribble."
 runs:
   using: "node12"
