@@ -1,0 +1,19 @@
+version = "0.3.2"
+
+[scripts]
+release.cmd = [
+    "git checkout stable",
+    "git merge main",
+    # We allow specifying a custom version for pre-releases
+    "standard-version --sign --commit-all %%",
+    "git push --follow-tags origin stable",
+    "git checkout main",
+    "git merge stable",
+    "git push origin main",
+    # Merge and push for a special branch used by people to reference the latest version
+    "git checkout v0",
+    "git merge main",
+    "git push origin v0",
+    "git checkout main"
+]
+release.desc = "creates a new release and pushes it (invoking CI on GitHub)"
