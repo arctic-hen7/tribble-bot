@@ -90814,12 +90814,12 @@ const newIssueHandler = async (ctx) => {
 const getRequestedLabels = (issueBody) => {
     // The relevant `<details>` block in a Tribble-formatted issue will always come at the end
     // We add to this because we need to get the actual contained text
-    const detailsOpenIdx = issueBody.lastIndexOf("<details>\n<summary>Tribble internal data</summary>") + 51;
+    const detailsOpenIdx = issueBody.lastIndexOf("</summary>") + 10;
     const detailsCloseIdx = issueBody.lastIndexOf("</details>");
     console.log(detailsOpenIdx);
     console.log(detailsCloseIdx);
-    // The indexing will return `-1` if it found nothing (but one had 51 added)
-    if (detailsOpenIdx === 50 || detailsCloseIdx === -1) {
+    // The indexing will return `-1` if it found nothing (but one had 10 added)
+    if (detailsOpenIdx === 9 || detailsCloseIdx === -1) {
         return undefined;
     }
     const encoded = issueBody.substring(detailsOpenIdx, detailsCloseIdx).trim();
