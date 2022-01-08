@@ -9,6 +9,7 @@ const newIssueHandler = async (ctx) => {
     try {
         // Get the body of the issue so that we can parse it
         const { data } = await ctx.octokit.issues.get(params);
+        console.log(data.body);
         // Get the labels out of that
         let labels = getRequestedLabels(data.body);
         // If we didn't find the appropriate formatting, we'll get `undefined`, in which case this issue wasn't created with Tribble and we should shut up
@@ -54,6 +55,8 @@ const test = `This report is reporting a bug. Description: test. Boolean: true
 <details>
 <summary>Tribble internal data</summary>
 
-QzpidWcsQTpmcm9udGVuZA==
+YnVnLHdvbnRmaXg=
 
 </details>`;
+
+// console.log(getRequestedLabels(test));
