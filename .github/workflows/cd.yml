@@ -10,7 +10,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-            - run: cargo install bonnie
             - uses: actions/setup-node@v2
               with:
                 node-version: 16
@@ -20,3 +19,5 @@ jobs:
               run: npm run build
             - name: Release
               uses: softprops/action-gh-release@v1
+              with:
+                files: dist/index.js
