@@ -90801,6 +90801,7 @@ const newIssueHandler = async (ctx) => {
         // Add the labels to that issue
         await ctx.octokit.issues.addLabels({ labels, ...params });
     } catch(err) {
+        console.error(err);
         // We have an error, but we have the details of the issue, so comment on it
         let errBody = "This repo is set up to triage issues with [Tribble](https://github.com/arctic-hen7/tribble), but this issue couldn't be processed. If you deliberately didn't use Tribble to report this issue, you can safely ignore this warning. If you did, something's gone wrong here.";
         await ctx.octokit.issues.createComment({ body: errBody, ...params });
