@@ -90794,7 +90794,6 @@ const newIssueHandler = async (ctx) => {
         const { data } = await ctx.octokit.issues.get(params);
         // Get the labels out of that
         let labels = getRequestedLabels(data.body);
-        console.log(labels);
         // If we didn't find the appropriate formatting, we'll get `undefined`, in which case this issue wasn't created with Tribble and we should shut up
         if (labels === undefined) {
             return;
@@ -90816,8 +90815,6 @@ const getRequestedLabels = (issueBody) => {
     // We add to this because we need to get the actual contained text
     const detailsOpenIdx = issueBody.lastIndexOf("</summary>") + 10;
     const detailsCloseIdx = issueBody.lastIndexOf("</details>");
-    console.log(detailsOpenIdx);
-    console.log(detailsCloseIdx);
     // The indexing will return `-1` if it found nothing (but one had 10 added)
     if (detailsOpenIdx === 9 || detailsCloseIdx === -1) {
         return undefined;
@@ -90832,19 +90829,19 @@ const getRequestedLabels = (issueBody) => {
         return { name };
     });
 
-    return githubLabels;
+    return labels;
 };
 
-const test = (/* unused pure expression or super */ null && (`This report is reporting a bug. Description: test. Boolean: true
+const test = `This report is reporting a bug. Description: test. Boolean: true
 
 <details>
 <summary>Tribble internal data</summary>
 
 YnVnLHdvbnRmaXg=
 
-</details>`));
+</details>`;
 
-// console.log(getRequestedLabels(test));
+console.log(getRequestedLabels(test));
 
 
 /***/ }),
