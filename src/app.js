@@ -8,9 +8,10 @@ const newIssueHandler = async (ctx) => {
     const params = ctx.issue();
     try {
         // Get the body of the issue so that we can parse it
-        const { body } = await ctx.octokit.issues.get(params);
+        const data = await ctx.octokit.issues.get(params);
+        console.log(data);
         // Get the labels out of that
-        let labels = getRequestedLabels(body);
+        let labels = getRequestedLabels(data.body);
         // If we didn't find the appropriate formatting, we'll get `undefined`, in which case this issue wasn't created with Tribble and we should shut up
         if (labels === undefined) {
             return;
