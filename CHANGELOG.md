@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0-rc.3](https://github.com/arctic-hen7/tribble-bot/compare/v0.1.0-rc.2...v0.1.0-rc.3) (2022-01-09)
+
+
+### Features
+
+* log errors if something goes wrong ([3e9bcf6](https://github.com/arctic-hen7/tribble-bot/commit/3e9bcf6cf8225901440332d70834228093658645))
+
+
+### Bug Fixes
+
+* fixed action entrypoint ([4ccc391](https://github.com/arctic-hen7/tribble-bot/commit/4ccc391712bb1c5dbd57279e964da4c12cdebf5a))
+* fixed gitignore to include dist file ([48df635](https://github.com/arctic-hen7/tribble-bot/commit/48df6352452392a801c9999d07ea10c4e94fe98b))
+* fixed issue body getter ([c6ad463](https://github.com/arctic-hen7/tribble-bot/commit/c6ad4636605d8b911cdeaf991faf07edbe747bdc))
+* fixed variable naming error ([ec9cc92](https://github.com/arctic-hen7/tribble-bot/commit/ec9cc92aaa43c4bf7c5bbdd80a1502ee87da65a5))
+* made label extraction system more resilient ([1f80431](https://github.com/arctic-hen7/tribble-bot/commit/1f804316d1894e13a1db51f1a85c7655ce345c13))
+* switched to simple array for adding labels ([b84bf4c](https://github.com/arctic-hen7/tribble-bot/commit/b84bf4cf7d69c138ef8cf205220e4931d12db297))
+
 ## [0.1.0-rc.2](https://github.com/arctic-hen7/tribble-bot/compare/v0.1.0-rc.1...v0.1.0-rc.2) (2022-01-08)
 
 ## 0.1.0-rc.1 (2022-01-08)
