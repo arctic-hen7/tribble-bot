@@ -23,7 +23,7 @@ jobs:
 
 ```
 
-This creates a new workflow called *Tribble* that will run whenever a new issue is opened on your repository, and then it'll run the `triage` job, which just invokes the Tribble bot, parsing it an access token so that it can add labels to issues.
+This creates a new workflow called *Tribble* that will run whenever a new issue is opened on your repository, and then it'll run the `triage` job, which just invokes the Tribble bot, providing an access token to it so it can add labels to issues.
 
 ## Explanation
 
