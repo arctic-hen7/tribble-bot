@@ -90799,8 +90799,7 @@ const newIssueHandler = async (ctx) => {
             return;
         }
         // Add the labels to that issue
-        let res = await ctx.octokit.issues.addLabels({ labels, ...params });
-        console.log(res);
+        await ctx.octokit.issues.addLabels({ labels, ...params });
     } catch(err) {
         console.error(err);
         // We have an error, but we have the details of the issue, so comment on it
@@ -90831,17 +90830,6 @@ const getRequestedLabels = (issueBody) => {
 
     return labels;
 };
-
-const test = `This report is reporting a bug. Description: test. Boolean: true
-
-<details>
-<summary>Tribble internal data</summary>
-
-YnVnLHdvbnRmaXg=
-
-</details>`;
-
-console.log(getRequestedLabels(test));
 
 
 /***/ }),
