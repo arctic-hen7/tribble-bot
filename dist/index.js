@@ -90800,7 +90800,8 @@ const newIssueHandler = async (ctx) => {
         }
         // Add the labels and assignees to that issue
         await ctx.octokit.issues.addLabels({ labels, ...params });
-        await ctx.octokit.issues.addAssignees({ assignees, ...params });
+        let res = await ctx.octokit.issues.addAssignees({ assignees, ...params });
+        console.log(res);
     } catch(err) {
         console.error(err);
         // We have an error, but we have the details of the issue, so comment on it
