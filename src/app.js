@@ -16,8 +16,16 @@ const newIssueHandler = async (ctx) => {
             return;
         }
         // Add the labels and assignees to that issue
+        // BUG This seems to work from the logs, but doesn't actually assign the user
         await ctx.octokit.issues.addLabels({ labels, ...params });
-        let res = await ctx.octokit.issues.addAssignees({ assignees, ...params });
+        // await ctx.octokit.request(`POST /repos/${params.owner}/${params.repo}/issues/${params.issue_number}/assignees`, {
+        //     accept
+        //     owner: params.ownder,
+        //     repo: params.repo,
+        //     title: "Hello, world!",
+        //     body: "I created this issue using Octokit!",
+        // });
+        let res = await ctx.octokit.issues.addAssignees({ assignees, ...params, accept: "application/vnd.github.v3+json" });
         console.log(res);
     } catch(err) {
         console.error(err);
