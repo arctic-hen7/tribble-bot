@@ -27,7 +27,7 @@ This creates a new workflow called *Tribble* that will run whenever a new issue 
 
 ## Explanation
 
-Tribble is a system for generating website pages that guide users through contributing to an open-source project, like creating their first issue. In addition, Tribble lets you specify what tags should be accumulated by going through different pathways of the interface (think of Tribble as creating an interactive flow chart of all the ways of contributing to your project). When the user finishes the process, they can copy the text Tribble generates into a new GitHub issue on your project's repository, and then this bot can extract some encoded data to automatically add labels and assignees to the issue within seconds of its being opened.
+Tribble is a system for generating website pages that guide users through contributing to an open-source project, like creating their first issue. In addition, Tribble lets you specify what tags should be accumulated by going through different pathways of the interface (think of Tribble as creating an interactive flow chart of all the ways of contributing to your project). When the user finishes the process, they can copy the text Tribble generates into a new GitHub issue on your project's repository, and then this bot can extract some encoded data to automatically add labels and assignees to the issue within around 15 seconds (subject to GitHub Actions delays) of its being opened.
 
 For more information about Tribble, check out [its repository](https://github.com/arctic-hen7/tribble)!
 
