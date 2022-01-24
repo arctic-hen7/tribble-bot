@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/arctic-hen7/tribble-bot/compare/v0.1.0-rc.3...v0.1.0) (2022-01-24)
+
+
+### Features
+
+* added assignees support ([abc63bc](https://github.com/arctic-hen7/tribble-bot/commit/abc63bc88634d87ccd27012d2305ba905a41cf96))
+
+
+### Bug Fixes
+
+* added `accept` type for assignee adding ([e250ac9](https://github.com/arctic-hen7/tribble-bot/commit/e250ac9fe078f29b70f3e4a63aa1360866fd709b))
+
+
+### Documentation Changes
+
+* added proper readme ([ce9523b](https://github.com/arctic-hen7/tribble-bot/commit/ce9523bc681bfea4303aaca72f02aac0c76fc48e))
+* cleaned up readme ([e5ecaa6](https://github.com/arctic-hen7/tribble-bot/commit/e5ecaa68e710956a74628e12b5e5feb469ba3a05))
+* fixed typo in README ([65bca18](https://github.com/arctic-hen7/tribble-bot/commit/65bca181bb19c9920a63ea920f43ce00f679605b))
+
 ## [0.1.0-rc.3](https://github.com/arctic-hen7/tribble-bot/compare/v0.1.0-rc.2...v0.1.0-rc.3) (2022-01-09)
 
 
