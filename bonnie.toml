@@ -17,3 +17,5 @@ release.cmd = [
     "git checkout main"
 ]
 release.desc = "creates a new release and pushes it (invoking CI on GitHub)"
+replace-versions.cmd = "find . \\( \\( -name \"*package.json\" -or -name \"package-lock.json\" -or -name \"*.md\" \\) -not -name \"CHANGELOG.md\" -not -path \"./node_modules/*\" \\) -exec sed -i -e 's/%old_version/%new_version/g' {} \\;"
+replace-versions.args = [ "old_version", "new_version" ]
